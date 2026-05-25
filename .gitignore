@@ -3,4 +3,4 @@
 
 # 2. Whitelist
 !.gitignore
-!resume.tex
+!.tex
