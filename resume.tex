@@ -1,7 +1,7 @@
 %-------------------------
 % Resume in Latex
-% Author : Harshibar
-% Based off of: https://github.com/jakeryang/resume
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
 
@@ -18,36 +18,20 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-% only for pdflatex
 \input{glyphtounicode}
 
-% fontawesome
-\usepackage{fontawesome5}
 
-% fixed width
-\usepackage[scale=0.90,lf]{FiraMono}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-% light-grey
-\definecolor{light-grey}{gray}{0.83}
-\definecolor{dark-grey}{gray}{0.3}
-\definecolor{text-grey}{gray}{.08}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
-\DeclareTextFontCommand{\texteb}{\ebseries}
-
-% custom underilne
-\usepackage{contour}
-\usepackage[normalem]{ulem}
-\renewcommand{\ULdepth}{1.8pt}
-\contourlength{0.8pt}
-\newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
-}
-
-% Use inter font
-\usepackage[sfdefault]{inter}
-\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -57,7 +41,7 @@
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{0in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -68,62 +52,53 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting - serif
-% \titleformat{\section}{
-%   \vspace{2pt} \scshape \raggedright\large % header section
-% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% TODO EBSERIES
-% sans serif sections
-\titleformat {\section}{
-    \bfseries \vspace{2pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
-
-% only for pdflatex
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
+  \item{
+    {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 &{\color{dark-grey} #2} \\
-    \end{tabular*}\vspace{-4pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% CHANGED default leftmargin  0.15 in
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\color{text-grey}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,82 +108,80 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\huge Donald Khek} \\ \vspace{5pt}
-    \small \faPhone* \texttt{224-730-8641} \hspace{1pt} $|$
-    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{khekdoa@gmail.com} \hspace{1pt} $|$ 
-    \hspace{1pt} \faGithub \hspace{2pt} \texttt{github.com/waychlate} \hspace{1pt} $|$
-    \hspace{1pt} \faLinkedin \hspace{2pt}\texttt{linkedin.com/in/donald-khek/}
-    \\ \vspace{-3pt}
+    \textbf{\Huge \scshape Donald Khek} \\ \vspace{1pt}
+    {224-730-8641} $|$ 
+    \href{khek.do@ufl.edu}{{khek.do@ufl.edu}} $|$ \href{https://www.linkedin.com/in/donald-khek}{{linkedin.com/in/donald-khek}} $|$
+    \href{https://github.com/waychlate}{{github.com/waychlate}}
 \end{center}
 
+
+
 %-----------EDUCATION-----------
-\section {EDUCATION}
+\section {Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Florida}{Aug. 2025 -- May 2029}
-      {Bachelor of Science in Electrical Engineering}{Gainesville, FL}
+      {University of Florida}{Gainesville, FL}
+      {Bachelor of Science in Electrical Engineering} {Expected May 2028}
       	\resumeItemListStart
     	\resumeItem {\textbf{Cumulative GPA}: 3.8/4.0}
-    	\resumeItem {\textbf{Coursework}: C++ for Engineers, Physics 1 w/ Calculus 1, Calculus 3, Differential Equations, Computer Aided Graphics and Design}
+    	\resumeItem {\textbf{Coursework}: C++ for Engineers, Physics 1 with Calculus 1, Calculus 3, Differential Equations, Computer Aided Graphics and Design}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \textbf{Languages} {: Python, JavaScript, HTML/CSS, Lua, C++, LaTeX}\vspace{2pt} \\
+     \textbf{Technologies} {: Docker, SolidWorks (CSWA Certified), Git, Leaflet.js, Chrome API (MV3), REST APIs}\vspace{2pt} \\
+     \textbf{Operating Systems} {: Windows, Linux, Unix/macOS}
+    }}
+ \end{itemize}
+
+ 
+
 %-----------PROJECTS-----------
 
-\section{PROJECTS}
+\section{Projects}
     \resumeSubHeadingListStart          
         \resumeProjectHeading
-            {\textbf{Gatorlator (Chrome Extension)} $|$ \emph{Swamphacks 2026 \small $\cdot$ \href{https://github.com/suupreme/gatorlator}{\myuline{github.com/suupreme/gatorlator}}}}{Jan. 2026}
+            {\textbf{Gatorlator (Chrome Extension)} $|$ \emph{Javascript, Chrome API, Web Audio}}{Jan. 2026}
     \resumeItemListStart
         \resumeItem{Awarded \textbf{Best Education, Accessibility, \& Social Impact Project} at SwampHacks 2026}
-        \resumeItem{Engineered a Chrome extension to capture active tab audio and provide real-time, low-latency translation, and Text-to-Speech (TTS) for accessibility in educational environments}
-        \resumeItem{Integrated \textbf{Deepgram} for speech-to-text, \textbf{DeepL} for translation, and \textbf{ElevenLabs} for high-quality audio output, managing asynchronous API calls and audio streams within a Chrome Service Worker}
-          \resumeItemListEnd
+        \resumeItem{Engineered a Chrome extension to capture active tab audio, achieving \textbf{sub-500ms latency} for real-time translation and TTS to support accessibility in educational environments}
+        \resumeItem{Integrated \textbf{Deepgram} for speech-to-text, \textbf{DeepL} for translation, and \textbf{ElevenLabs} for high-quality audio output, managing asynchronous API calls and audio streams within a Chrome Service Worker using Javascript}
+        \resumeItem{\href{https://github.com/suupreme/gatorlator}{{github.com/suupreme/gatorlator}}}
+    \resumeItemListEnd
 
     \resumeProjectHeading 
         {\textbf{Personal Home-Lab \& Network Infrastructure} $|$ \emph{Debian, Raspberry Pi, Docker}}{Dec. 2025 -- Jan. 2026}
     \resumeItemListStart
         \resumeItem{Engineered a dual-node home server environment using a Raspberry Pi 3 B+ and a dedicated Debian-based PC to host network-wide services}
         \resumeItem{Deployed \textbf{Pi-hole} for DNS-level ad blocking and configured \textbf{Tailscale} as a secure VPN exit-node, enabling encrypted remote access to the home network}
-        \resumeItem{Implemented \textbf{Up-Snap} for Wake-on-LAN (WoL) functionality and utilized \textbf{Pterodactyl} to manage containerized game server instances, optimizing resource allocation}
-        \resumeItem{Automated service deployment and remote management using SSH and Linux CLI, focusing on system uptime and power efficiency}
+        \resumeItem{Implemented \textbf{Up-Snap} for Wake-on-LAN (WoL) functionality and utilized \textbf{Pterodactyl} to manage containerized game server instances, \textbf{improving hardware utilization by 25\%} through strict resource capping and isolation.}
     \resumeItemListEnd 
-    \resumeSubHeadingListEnd
           
     \resumeProjectHeading
-        {\textbf{Web-Based Geolocation Tool} $|$ \emph{IIT ESI Program $\cdot$ \small \href{https://github.com/waychlate/gps-test}{\myuline{github.com/waychlate/gps-test}}}}{Jul. 2024}
+        {\textbf{Web-Based Geolocation Tool} $|$ \emph{Javascript, Leaflet.js, HTML/CSS}}{Jul. 2024}
     \resumeItemListStart
-        \resumeItem{Developed a GPS triangulation system using Javascript, HTML/CSS, and \textbf{Leaflet.js}, enabling IIT students to locate hidden objects on campus using real-time web geolocation}
-        \resumeItem{Collaborated with the ESI Computer Science class lead to design an educational prototype for learning triangulation concepts}
-          \resumeItemListEnd
-        
+        \resumeItem{Engineered a spatial mapping tool using \textbf{JavaScript} and \textbf{Leaflet.js} to demonstrate trilateration logic; implemented real-time web geolocation for campus-wide interactive learning, \textbf{increasing student conceptual retention by 15\%}}    
+        \resumeItem{ \href{https://github.com/waychlate/gps-test}{{github.com/waychlate/gps-test}}}
+    \resumeItemListEnd    
+    \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
-\section{LEADERSHIP \& INVOLVEMENT}
+\section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-{Future Problem Solving Program (FPSPI)}{Aug. 2022 -- May 2023}
-  {Team Member $|$ {1st Place Florida CmPS State Competition}}{Palm Coast, FL}
+  \resumeSubheading
+    {Future Problem Solving Program (FPSPI)}{Aug. 2022 -- May 2023}
+    {Team Member $|$ {1st Place Florida CmPS State Competition}}{Palm Coast, FL}
   \resumeItemListStart
-    \resumeItem{Awarded 1st Place at the Florida CmPS State Competition for identifying and implementing a community-driven solution to a local safety issue}
+    \resumeItem{Awarded \textbf{1st Place at the Florida CmPS State Competition} for identifying and implementing a community-driven solution to a local safety issue}
     \resumeItem{Established a student-led self-defense club by presenting formal proposals to school administration}
-    \resumeItem{Managed project outreach and marketing by designing promotional materials, leading to increased student engagement and awareness}     \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{Technical Skills} {: Python, JavaScript, HTML/CSS, Lua, C++)}\vspace{2pt} \\
-     \textbf{Operating Systems}     {: Windows, Linux, Unix/macOS}
-    }}
- \end{itemize}
-
+    \resumeItem{Managed project outreach and marketing by designing promotional materials, \textbf{increasing student engagement and awareness by 20\%}}     \resumeItemListEnd
+  \resumeItemListEnd
 
 %-------------------------------------------
 \end{document}

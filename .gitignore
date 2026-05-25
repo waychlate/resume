@@ -1,0 +1,6 @@
+# 1. Ignore all files and folders
+*
+
+# 2. Whitelist
+!.gitignore
+!resume.tex
