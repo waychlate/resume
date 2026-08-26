@@ -109,7 +109,6 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Donald Khek} \\ \vspace{1pt}
-    {224-730-8641} $|$ 
     \href{khek.do@ufl.edu}{{khek.do@ufl.edu}} $|$ \href{https://www.linkedin.com/in/donald-khek}{{linkedin.com/in/donald-khek}} $|$
     \href{https://github.com/waychlate}{{github.com/waychlate}}
 \end{center}
@@ -123,8 +122,8 @@
       {University of Florida}{Gainesville, FL}
       {Bachelor of Science in Electrical Engineering} {Expected May 2028}
       	\resumeItemListStart
-    	\resumeItem {\textbf{Cumulative GPA}: 3.8/4.0}
-    	\resumeItem {\textbf{Coursework}: C++ for Engineers, Physics 1 with Calculus 1, Calculus 3, Differential Equations, Computer Aided Graphics and Design}
+    	\resumeItem {\textbf{Cumulative GPA}: 3.89/4.0}
+    	\resumeItem {\textbf{Coursework}: C++ for Engineers, Computer Aided Graphics and Design, Digital Logic and Computer Systems, Signals and Systems}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -134,24 +133,47 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
      \textbf{Languages} {: Python, JavaScript, HTML/CSS, Lua, C++, LaTeX}\vspace{2pt} \\
-     \textbf{Technologies} {: Docker, SolidWorks (CSWA Certified), Git, Leaflet.js, Chrome API (MV3), REST APIs}\vspace{2pt} \\
+  \textbf{Hardware \& Tools} {: KiCad, SolidWorks (CSWA Certified), Git, Docker, SPI, I2C, HiPerGator HPC (SLURM)}\vspace{2pt} \\
+     \textbf{Frameworks \& Libraries} {: PyTorch, NumPy, Web Audio API, Chrome Extensions (MV3), REST APIs}\vspace{2pt} \\
      \textbf{Operating Systems} {: Windows, Linux, Unix/macOS}
     }}
  \end{itemize}
 
- 
+
+ %-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+    {TEA Lab}{Jun. 2026 -- Present}
+    {Undergraduate Research Assistant $|$ {Python, NumPy, HiPerGator HPC}}{Gainesville, FL}
+  \resumeItemListStart
+    \resumeItem{Engineered parallelized data generation on the \textbf{HiPerGator HPC Cluster} using custom Bash and SLURM
+scripts, creating images and CSV data with \textbf{Python} and highway-env}
+    \resumeItem{Developed and trained a Convolutional Neural Network (CNN) using \textbf{PyTorch} and ResNet-18 to predict
+the time-to-collision from images, achieving a Mean Square Error (MSE) of 0.0035}
+    \resumeItem{Participated in weekly architecture reviews to direct data collection pipelines, evaluate loss convergence, and optimize model hyperparameters}
+\resumeItemListEnd
+  \resumeItemListEnd
+
 
 %-----------PROJECTS-----------
 
 \section{Projects}
     \resumeSubHeadingListStart          
         \resumeProjectHeading
-            {\textbf{Gatorlator (Chrome Extension)} $|$ \emph{Javascript, Chrome API, Web Audio}}{Jan. 2026}
+            {\textbf{Gatorlator (Chrome Extension)} $|$ \href{https://github.com/suupreme/gatorlator}{\underline{GitHub}} $|$ \emph{Javascript, Chrome API, Web Audio}}{Jan. 2026}
     \resumeItemListStart
         \resumeItem{Awarded \textbf{Best Education, Accessibility, \& Social Impact Project} at SwampHacks 2026}
         \resumeItem{Engineered a Chrome extension to capture active tab audio, achieving \textbf{sub-500ms latency} for real-time translation and TTS to support accessibility in educational environments}
         \resumeItem{Integrated \textbf{Deepgram} for speech-to-text, \textbf{DeepL} for translation, and \textbf{ElevenLabs} for high-quality audio output, managing asynchronous API calls and audio streams within a Chrome Service Worker using Javascript}
-        \resumeItem{\href{https://github.com/suupreme/gatorlator}{{github.com/suupreme/gatorlator}}}
+    \resumeItemListEnd
+    \resumeProjectHeading
+            {\textbf{Custom E-Paper E-Reader} $|$ \emph{C++, KiCad, ESP32, Hardware Design, SPI, I2C}}{July 2026 -- Aug. 2026}
+    \resumeItemListStart
+        \resumeItem{Designed and routed a compact \textbf{4-layer PCB} in \textbf{KiCad} around an \textbf{ESP32-C3} RISC-V microcontroller, integrating an onboard boost converter circuit to supply high-voltage bias rails for a \textbf{5-inch E-Ink} display}
+        \resumeItem{Implemented an automated \textbf{P-MOSFET power-path} switching circuit with \textbf{MCP73831} LiPo charging management, optimizing battery longevity with hardware power-gating}
+        \resumeItem{Ported and refactored the open-source \textbf{CrossPoint} C++ firmware, optimizing memory footprint and partition tables to run reliably on \textbf{4MB Flash} (down from 16MB)}
     \resumeItemListEnd
 
     \resumeProjectHeading 
@@ -159,29 +181,10 @@
     \resumeItemListStart
         \resumeItem{Engineered a dual-node home server environment using a Raspberry Pi 3 B+ and a dedicated Debian-based PC to host network-wide services}
         \resumeItem{Deployed \textbf{Pi-hole} for DNS-level ad blocking and configured \textbf{Tailscale} as a secure VPN exit-node, enabling encrypted remote access to the home network}
-        \resumeItem{Implemented \textbf{Up-Snap} for Wake-on-LAN (WoL) functionality and utilized \textbf{Pterodactyl} to manage containerized game server instances, \textbf{improving hardware utilization by 25\%} through strict resource capping and isolation.}
+        \resumeItem{Implemented \textbf{Up-Snap} for Wake-on-LAN (WoL) functionality and utilized \textbf{Pterodactyl} to manage containerized game server instances, \textbf{improving hardware utilization by 25\%} through strict resource capping and isolation}
     \resumeItemListEnd 
-          
-    \resumeProjectHeading
-        {\textbf{Web-Based Geolocation Tool} $|$ \emph{Javascript, Leaflet.js, HTML/CSS}}{Jul. 2024}
-    \resumeItemListStart
-        \resumeItem{Engineered a spatial mapping tool using \textbf{JavaScript} and \textbf{Leaflet.js} to demonstrate trilateration logic; implemented real-time web geolocation for campus-wide interactive learning, \textbf{increasing student conceptual retention by 15\%}}    
-        \resumeItem{ \href{https://github.com/waychlate/gps-test}{{github.com/waychlate/gps-test}}}
-    \resumeItemListEnd    
+              
     \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-  \resumeSubheading
-    {Future Problem Solving Program (FPSPI)}{Aug. 2022 -- May 2023}
-    {Team Member $|$ {1st Place Florida CmPS State Competition}}{Palm Coast, FL}
-  \resumeItemListStart
-    \resumeItem{Awarded \textbf{1st Place at the Florida CmPS State Competition} for identifying and implementing a community-driven solution to a local safety issue}
-    \resumeItem{Established a student-led self-defense club by presenting formal proposals to school administration}
-    \resumeItem{Managed project outreach and marketing by designing promotional materials, \textbf{increasing student engagement and awareness by 20\%}}     \resumeItemListEnd
-  \resumeItemListEnd
 
 %-------------------------------------------
 \end{document}
